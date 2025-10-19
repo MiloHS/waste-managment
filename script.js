@@ -282,15 +282,15 @@ function toggleLayer(layerType, buttonElement) {
         console.log(`Showed ${layerType} layer`);
         
         // Fit map to show the layer bounds if it's the first layer
-        if (activeLayers.size === 1) {
-            setTimeout(() => {
-                try {
-                    map.fitBounds(layer.getBounds(), { padding: [20, 20] });
-                } catch (e) {
-                    console.log('Could not fit bounds for layer:', layerType);
-                }
-            }, 100);
-        }
+        // if (activeLayers.size === 1) {
+        //     setTimeout(() => {
+        //         try {
+        //             map.fitBounds(layer.getBounds(), { padding: [20, 20] });
+        //         } catch (e) {
+        //             console.log('Could not fit bounds for layer:', layerType);
+        //         }
+        //     }, 100);
+        // }
     }
 }
 
