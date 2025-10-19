@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management Facilities Dashboard</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <h1>Waste Management Facilities Dashboard</h1>
+            <p>Interactive map showing recycling and waste management facilities across the United States</p>
+        </header>
+
+        <!-- Main Dashboard Content -->
+        <div class="dashboard-main">
+            <!-- Filter Panel -->
+            <div class="filter-panel">
+                <h3>Facility Types</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-layer="mrf" id="btn-mrf">
+                        <span class="btn-color" style="background-color: #FF6B6B;"></span>
+                        MRF
+                    </button>
+                    
+                    <button class="filter-btn" data-layer="glass" id="btn-glass">
+                        <span class="btn-color" style="background-color: #4ECDC4;"></span>
+                        Glass Recycling
+                    </button>
+                    
+                    <button class="filter-btn" data-layer="glass-secondary" id="btn-glass-secondary">
+                        <span class="btn-color" style="background-color: #45B7D1;"></span>
+                        Glass Secondary
+                    </button>
+                    
+                    <button class="filter-btn" data-layer="plastic" id="btn-plastic">
+                        <span class="btn-color" style="background-color: #96CEB4;"></span>
+                        Plastic Recycling
+                    </button>
+                    
+                    <button class="filter-btn" data-layer="paper" id="btn-paper">
+                        <span class="btn-color" style="background-color: #FFEAA7;"></span>
+                        Paper
+                    </button>
+                    
+                    <button class="filter-btn" data-layer="paper-secondary" id="btn-paper-secondary">
+                        <span class="btn-color" style="background-color: #DDA0DD;"></span>
+                        Paper Secondary
+                    </button>
+                    
+                    <button class="filter-btn" data-layer="electronics" id="btn-electronics">
+                        <span class="btn-color" style="background-color: #FFB347;"></span>
+                        Electronics
+                    </button>
+                    
+                    <button class="filter-btn" data-layer="wood" id="btn-wood">
+                        <span class="btn-color" style="background-color: #8B4513;"></span>
+                        Wood Recycling
+                    </button>
+                    
+                    <button class="filter-btn" data-layer="wood-secondary" id="btn-wood-secondary">
+                        <span class="btn-color" style="background-color: #A0522D;"></span>
+                        Wood Secondary
+                    </button>
+                    
+                    <button class="filter-btn" data-layer="transfer" id="btn-transfer">
+                        <span class="btn-color" style="background-color: #708090;"></span>
+                        Transfer Stations
+                    </button>
+                </div>
+                <div class="legend">
+                    <p><strong>Legend:</strong> Click buttons to toggle facility types on/off</p>
+                </div>
+            </div>
+
+            <!-- Map Container -->
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            <p>Data Source: Waste Management Facilities GeoJSON Files</p>
+        </footer>
+    </div>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
